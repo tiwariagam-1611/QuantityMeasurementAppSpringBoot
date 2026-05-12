@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import com.app.quantitymeasurement.model.*;
 
 @RestController
-@RequestMapping("/api/v1/quantities")
+@RequestMapping("/api/quantities")
+@CrossOrigin(origins = "http://localhost:3000")
 public class QuantityMeasurementController {
 
     @Autowired
