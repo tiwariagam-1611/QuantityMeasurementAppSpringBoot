@@ -18,18 +18,14 @@ public class QuantityMeasurementController {
     @Autowired
     private QuantityMeasurementService service;
 
-    @GetMapping("/history")
-    public List<QuantityMeasurementEntity> getAllHistory() {
-        return service.getAll();
-    }
+    // @GetMapping("/history")
+    // public List<QuantityMeasurementEntity> getAllHistory() {
+    //     return service.getAll();
+    // }
     @GetMapping("/history/{operation}")
     public List<QuantityMeasurementEntity> getByOperation(
             @PathVariable String operation) {
         return service.getByOperation(operation.toUpperCase());
-    }
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hi from Jenkins CI/CD Deployment!";
     }
     
     @PostMapping("/{operation}")
